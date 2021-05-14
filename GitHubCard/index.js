@@ -1,3 +1,9 @@
+
+
+
+import axios from 'axios';
+
+
 /*
   STEP 1: using axios, send a GET request to the following URL
     (replacing the placeholder with your Github name):
@@ -16,7 +22,16 @@
   STEP 4: Pass the data received from Github into your function,
     and append the returned markup to the DOM as a child of .cards
 */
-
+axios.get("https://api.github.com/users/cFoschini")
+.then((futureData) => {
+  console.log('Future data!');
+})
+.catch((e) => {
+  console.log('Error')
+})
+.finally(() => {
+  console.log('Finished')
+})
 /*
   STEP 5: Now that you have your own card getting added to the DOM, either
     follow this link in your browser https://api.github.com/users/<Your github name>/followers,
